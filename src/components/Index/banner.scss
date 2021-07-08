@@ -1,0 +1,34 @@
+.n-ban {
+  .wrap {
+    position: relative;
+    width: 982px;
+    height: 285px;
+    margin: 0 auto;
+  }
+  .ban{
+    width: 982px;
+    height: 285px;
+    .btnl{
+      left: -68px;
+      background-position: 0 -360px;
+    }
+    .btnr{ 
+      right: -68px;
+      background-position: 0 -508px;
+    }
+    .btnl{
+      position: absolute;
+      display: block;
+      top: 50%;
+      margin-top: -31px;
+      width: 37px;
+      height: 63px;
+      text-indent: -9999px;
+    }
+  }
+  .ban-img{
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+  } 
+}

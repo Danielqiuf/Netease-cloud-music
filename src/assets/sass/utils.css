@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/**
+* @author Daniel·qiu
+* @description 封装后常用的sass混合函数与处理函数
+*/
+/* 每个产品和小程序对应的oss文件目录名不同，使用image前需要先设置属于当前小程序和产品的目录,aliyun_oss_program_name和aliyun_oss_product_name */
+/* 阿里云请求域名 */
+/* 阿里云二级小程序文件名 */
+/* 阿里云三级+产品文件名 */
+/* 字体文件存放位置 */
+.flexbox {
+  display: flex;
+}
+
+.flexbox-inline {
+  display: inline-flex;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-w-typeset {
+  flex-flow: row wrap;
+}
+
+.row-nw-typeset {
+  flex-flow: row nowrap;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-w-typeset {
+  flex-flow: column wrap;
+}
+
+.column-nw-typeset {
+  flex-flow: column nowrap;
+}
+
+.column-center {
+  place-content: center center;
+  align-content: center;
+  justify-content: center;
+}
+
+.row-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.jusifty-start {
+  justify-content: flex-start;
+}
+
+.jusifty-bet {
+  justify-content: space-between;
+}
+
+.justify-ar {
+  justify-content: space-around;
+}
+
+.jusify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: end;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.order1 {
+  order: 1;
+}
+
+.order2 {
+  order: 2;
+}
+
+.order3 {
+  order: 3;
+}
+
+.order4 {
+  order: 4;
+}
+
+.order5 {
+  order: 5;
+}
+
+.flex50p {
+  flex: 1 1 50%;
+}
+
+.flexauto {
+  flex: 1 1 auto;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+/**
+* @description 乘阶运算
+* @param {number} 乘数
+* @return {number}
+**/
+/**
+* @description 除法运算
+* @param {number} $divisor 除数
+* @param {number} $dividend 被除数
+* @param (any) $suffix 返回单位 (rpx, px, rem, em, pt...)
+* @return {number} 商
+**/
+/**
+* @description 乘法运算
+* @param {number} $factor 因数1
+* @param {number} $factor2 因数2
+* @param (any) $suffix 返回单位 (rpx, px, rem, em, pt...)
+* @return {number} 积
+**/
+/**
+* @description 合并map (a:b) (c:d) => (a:b,c:d)
+* @param $maps map1, map2, map3... 以逗号分隔参数
+* @return {map}
+**/
+/* ty(12px).transform */
+/* ... */
+/**
+* @description 背景图片
+* @param {string} $image-name 图片名称
+* @param {map} $properties-map 图片属性设置map
+**/
+/* flex默认居中布局 */
+/* flex横向换行居中布局 */
+/* flex纵向布局 */
+/**
+* @description 统一规格字体大小与字体颜色和行高，字体行高默认和字体大小一样，若不一样需要单独在后面设置覆盖该属性
+* @param {number} $size 字体大小
+* @param {boolean} $bold 是否加粗
+* @param {colors} $color 字体颜色
+**/
+/**
+* @description 细边框，比1px还要细
+* @param {colors} $color 边框颜色
+* @param {number} $radius 圆角半径,单位为rpx，传值不带单位
+**/
+/**
+* @description 媒体查询
+* @param {number} $max-width 页面最大宽度
+* @param {number} $min-width 页面最小宽度
+* @param $mediatype 查询类型 (only-screen, screen, all, print, aural...) 
+**/
+/**
+* @description 文本溢出处理,当$line > 1时文本呈现纵向排列，默认为横向排列
+* @param {number} $line 溢出行数
+**/
+/**
+* @description 无限放大缩小按钮动画
+* @param {number} $duration 持续时间
+**/
+/**
+* @description keyframes动画流程,可以使用ty{transform:translateY} tx{transform:translateX} visible{opacity} width height函数来接收map对象，并合并的一个对象
+* @param {string} $process-name 名称
+* @param {list} $process-list 流程数组 (css-property:css-value, css-property2:css-value2) (...)
+* @example 
+*   // 使用map对象作为参数
+*   @include process (animation-name, (transform: translateY(0), opacity: 0), (transform:translateY(100%),opacity:1));
+*   // 以上代码会编译成：
+*   @keyframes animation-name {0%{transform: translateY(0);opacity: 0} 100%{transform:translateY(100%);opacity:1}}
+*   // 使用函数接收后合并作为map参数
+*   $process1: merge(tx(0),visible(0));
+*   $process2: merge(tx(100%),visible(1));
+*   $process3: merge(tx(0)，visible(0), width(100%), (visibility:hidden));  // (visible:hidden)作为其它css属性传入合并
+*   @include process (animation-name, $process1, $process2, $process3);
+*   // 以上代码会编译成：
+*   @keyframes animation-name { 0%{transform:translateX(0);opacity:0} 50%{transform:translateX(100%);opacity:1} 100%{transform:translateX(0);opacity:0;width:100%;visibility:hidden} }
+**/
+/**
+* @description 加载字体,加载字体前需要设置$font-file-dir的地址
+* @param {string} $font-name 字体文件名
+* @param $font-style  字体默认风格
+* @param $font-weight 字体粗细
+**/

@@ -1,0 +1,48 @@
+.m-top .logo, .m-nav .cor, .m-nav .hot, .m-srch .srchbg, .m-mail, .m-tophead, .m-topvd {
+  @include image ('topbar', (
+    locale: '~_a/images',
+    position: 0 9999px,
+    size: auto
+  ));
+}
+.f-pa{
+  position: absolute;
+}
+.f-pr{
+  position: relative;
+  zoom: 1;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+a, a *, .f-hand, .f-hand *{
+  cursor: pointer;
+}
+
+.m-nav li, .m-nav li span, .m-nav a, .m-nav a em {
+  float: left;
+  height: 70px;
+  font-size: 14px;
+}
+img, .txt{
+  border: 0;
+} 
+input:focus, textarea:focus, span:focus, a:focus, button:focus{
+  outline: none;
+}
+.f-r-white-icon{
+  @include image('white-r-icon@3x', (
+    locale: '~_a/images',
+    size: auto
+  ));
+}
+
+.n-ban .shadow, .n-ban .shadowr, .n-ban .ban .btnl, .n-ban .ban .btnr, .n-ban .dots .pg{
+  @include image('banner', (
+    position: 0 9999px,
+    size: auto
+  ))
+}
