@@ -39,10 +39,3 @@ input:focus, textarea:focus, span:focus, a:focus, button:focus{
     size: auto
   ));
 }
-
-.n-ban .shadow, .n-ban .shadowr, .n-ban .ban .btnl, .n-ban .ban .btnr, .n-ban .dots .pg{
-  @include image('banner', (
-    position: 0 9999px,
-    size: auto
-  ))
-}

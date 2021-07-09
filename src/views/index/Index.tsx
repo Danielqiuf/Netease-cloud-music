@@ -9,9 +9,9 @@ export default defineComponent({
   },
   setup() {
 
-    
+
     return () => (
-      <Banner />
+      <Banner interval={ 2000 } duration={ 800 } cDuration={ 200 } />
     )
   
   }

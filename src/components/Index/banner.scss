@@ -1,22 +1,29 @@
 .n-ban {
+  overflow: hidden;
   .wrap {
     position: relative;
     width: 982px;
-    height: 285px;
+    height: 270px;
     margin: 0 auto;
   }
   .ban{
     width: 982px;
-    height: 285px;
+    height: 270px;
     .btnl{
       left: -68px;
       background-position: 0 -360px;
+      &:hover{
+        background-position: 0 -430px;
+      }
     }
     .btnr{ 
       right: -68px;
       background-position: 0 -508px;
+      &:hover{
+        background-position: 0 -578px;
+      }
     }
-    .btnl{
+    .btnl,.btnr{
       position: absolute;
       display: block;
       top: 50%;
@@ -25,10 +32,65 @@
       height: 63px;
       text-indent: -9999px;
     }
+    img{
+      display: block;
+      width: 730px;
+      -webkit-backface-visibility: hidden;
+    }
   }
   .ban-img{
     width: 100%;
-    height: 285px;
+    height: 270px;
     overflow: hidden;
   } 
+  .shadow,.shadowr,.btnl,.btnr,.dots .pg{
+    @include image('banner',(
+      locale:'~_a/images',
+      size:auto,
+      position: 0 9999px
+    ))
+  }
+  .download{
+    position: absolute;
+    top: -15px;
+    z-index: 20;
+    right: -1px;
+    width: 254px;
+    height: 285px;
+    
+    .btn, & {
+      @include image('download',(
+        locale:'~_a/images',
+        size:auto
+      ));
+    }
+    .btn{
+      display: block;
+      width: 215px;
+      height: 56px;
+      margin: 186px 0 0 19px;
+      background-position: 0 9999px;
+      text-indent: -9999px;
+    }
+    p{
+      margin: 10px auto;
+      text-align: center;
+      color: #8d8d8d;
+    }
+    .shadow,.shadowr{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -19px;
+      width: 20px;
+      _display: none;
+      height: 285px;
+      background-position: -1px 0;
+    }
+    .shadowr{
+      left: auto;
+      right: -20px;
+      background-position: -20px 0;
+    }
+  }
 }

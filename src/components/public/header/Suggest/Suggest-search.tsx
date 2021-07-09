@@ -5,6 +5,7 @@ import {
   formatNumber
  } from '_u/index' 
 import { mapInputType } from './utils'
+import { BannerSwipeTransitionTimingFunction } from '@/enum/base'
 import type { FieldType } from '@/types/input.types'
 import '_c/global.scss'
 import './suggest-search.scss' 

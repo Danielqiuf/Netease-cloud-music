@@ -7,7 +7,7 @@ export default defineComponent({
   },
   setup() {
 
-    return () => (<div>
+    return () => (<div id="container">
       <Public-header />
       <router-view />
     </div>)

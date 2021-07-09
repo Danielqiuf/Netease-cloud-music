@@ -20,7 +20,7 @@
   background-position: 0 -508px;
 }
 
-.n-ban .ban .btnl {
+.n-ban .ban .btnl, .n-ban .ban .btnr {
   position: absolute;
   display: block;
   top: 50%;
@@ -28,6 +28,12 @@
   width: 37px;
   height: 63px;
   text-indent: -9999px;
+}
+
+.n-ban .ban img {
+  display: block;
+  width: 730px;
+  -webkit-backface-visibility: hidden;
 }
 
 .n-ban .ban-img {
