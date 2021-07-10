@@ -1,6 +1,63 @@
-h1 {
-  @include adfont (100px, false, blue);
+
+.g-bd1{
+  @include image('wrap1', (
+    locale:'~_a/images',
+    size: 100% 100%
+  )) 
 }
-.aaa{
-  width:20px;
+.s-bg, .v-hd2, .n-disk li{
+  @include image('index',(
+    locale:'~_a/images',
+    size:auto,
+    position:0 9999px
+  ))
+}
+.g-mn1{
+  float: left;
+  width: 100%;
+  margin-right: -250px;
+}
+.g-mn1c{
+  margin-right: 251px;
+}
+.g-wrap3{
+  padding: 20px 20px 40px;
+}
+.v-hd2{
+  height: 33px;
+  padding: 0 10px 0 34px;
+  background-position: -225px -156px;
+  border-bottom: 2px solid #C10D0C;
+  .tit{
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;;
+  }
+}
+
+.more{
+  float: right;
+  margin-top: 9px;
+  _margin-top: 11px;
+  .cor{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+}
+.f-ff2{
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+.s-bg6{
+  background-position: 0 -240px;
+}
+.f-cb:after{
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
 }

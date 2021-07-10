@@ -5,8 +5,7 @@ import {
   formatNumber
  } from '_u/index' 
 import { mapInputType } from './utils'
-import { BannerSwipeTransitionTimingFunction } from '@/enum/base'
-import type { FieldType } from '@/types/input.types'
+import type { FieldType } from '@/types'
 import '_c/global.scss'
 import './suggest-search.scss' 
 
@@ -74,11 +73,6 @@ export default defineComponent({
       }
     }
 
-    const getProp = (key: keyof typeof props) => {
-      if (isDef(props[key])) {
-        return props[key];
-      }
-    };
 
     const onLabelClick = () => {
       inputVisible.value = false;
@@ -90,7 +84,7 @@ export default defineComponent({
     }
 
     const onClickInput = () => {
-
+      /*eslint no-empty-function: "error"*/
     }
 
     const onBlur = () => {
@@ -100,11 +94,11 @@ export default defineComponent({
       
     }
     const onFocus = () => {
-
+      /*eslint no-empty-function: "error"*/
     }
 
     const endComposing = () => {
-
+      /*eslint no-empty-function: "error"*/
     }
 
     const renderInput = () => {

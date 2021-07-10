@@ -44,3 +44,13 @@ em, i {
   text-align: left;
   font-size: inherit;
 }
+
+.g-bd, .g-bd1, .g-bd2, .g-bd3, .g-bd4, .g-bd5, .g-bd6, .g-bd7 {
+  width: 980px;
+  min-height: 700px;
+  margin: 0 auto;
+  _height: 700px;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-width: 0 1px;
+}

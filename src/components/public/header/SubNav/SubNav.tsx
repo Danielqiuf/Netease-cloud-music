@@ -1,13 +1,8 @@
 import { defineComponent, reactive, ref } from 'vue'
+import type { SubNavItem } from '@/types'
 
 import '_c/global.scss'
 import './subnav.scss'
-
-export type SubNavItem = {
-  title:string;
-  id:number | string;
-  hasIcon?: boolean;
-}
 
 export default defineComponent({
   props: {
@@ -17,7 +12,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const iconIndex: number = 2;
+    const iconIndex = 2;
     const currentRef = ref<number|string>(0)
     const navItemList: [string, string, string, string, string, string] = [
       '推荐',

@@ -1,6 +1,6 @@
 import { HTMLAttributes, InputHTMLAttributes } from 'vue';
 import {isObject, isPromise, isFunction } from '_u/index';
-import type { FieldType } from '@/types/input.types'
+import type { FieldType } from '@/types'
  
 function isEmptyValue(value: unknown) {
   if (Array.isArray(value)) {

@@ -1,10 +1,11 @@
 import { defineComponent, onMounted, reactive,ref,computed, CSSProperties } from 'vue' 
 import { banner } from '@/api'
-import { BannerResponse, reqResult, BannerResponseRaw } from '@/interface/request'
-import { BannerArrowDirection } from '@/enum/base'
+import { reqResult } from '@/interface/request'
+import { BannerResponseRaw, BannerResponse } from '@/interface/response'
+import { BannerArrowDirection } from '@/enum'
 import './banner.scss'
-import '../global.scss'
-
+import '_c/global.scss'
+ 
 
 export default defineComponent({
   name:'Banner',
@@ -110,7 +111,7 @@ export default defineComponent({
       return (state.clicked) ? props.cDuration : props.duration
     })
 
-    const getImageUrl = (key:keyof BannerResponse, blur: boolean = false) => {
+    const getImageUrl = (key:keyof BannerResponse, blur = false) => {
       if(bannerResult.data.length) {
         return bannerResult.data[state.swipeIndex][key] + (blur ? '?imageView&blur=40x20' : '')
       }

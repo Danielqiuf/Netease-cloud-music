@@ -7,8 +7,8 @@
  * @param {Boolean} immediate 是否立即执行
  * @return null
  */
-let throttle_timer: ReturnType<typeof setTimeout>;
-let throttle_flag:boolean = false;
+let throttle_timer: NodeJS.Timeout;
+let throttle_flag = false;
 export function throttle(func:() => void, wait = 500, immediate = true) {
 	if (immediate) {
 		if (!throttle_flag) {
@@ -30,4 +30,4 @@ export function throttle(func:() => void, wait = 500, immediate = true) {
 			}, wait);
 		}
 	}
-};
+}

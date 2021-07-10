@@ -1,5 +1,5 @@
 html,body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   min-width: 982px;
@@ -41,4 +41,33 @@ em, i{
   text-align: left;
   font-size: inherit;
 }
+.u-cover .bottom, .u-cover .msk, .n-musicsd .lst .avatar .msk{
+  @include image('coverall',(
+    size:auto,
+    locale:'~_a/images'
+  ))
+}
+
+.u-cover .ply, .u-cover .icon-headset, .u-cover .icon-play, .u-face .msk, .n-note .head .msk, .icn-vip, .icn-daren, .u-checkbox {
+  @include image('iconall',(
+    size:auto,
+    locale:'~_a/images'
+  ))
+}
+.v-hd3{
+  height: 35px;
+  border-bottom: 2px solid #d13030;
+}
+.s-fc3, a.s-fc3:hover{
+  color: #666;
+}
  
+.g-bd, .g-bd1, .g-bd2, .g-bd3, .g-bd4, .g-bd5, .g-bd6, .g-bd7{
+  width: 980px;
+  min-height: 700px;
+  margin: 0 auto;
+  _height: 700px;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-width: 0 1px;
+}

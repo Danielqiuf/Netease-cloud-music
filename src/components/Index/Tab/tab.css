@@ -1,0 +1,20 @@
+.tab {
+  float: left;
+  margin: 7px 0 0 20px;
+}
+
+.s-fc3.s-bord::after {
+  content: '|';
+  display: inline-block;
+  margin: 0 10px;
+  color: #ccc;
+}
+
+.s-fc3:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.s-fc3, a.s-fc3:hover {
+  color: #666;
+}

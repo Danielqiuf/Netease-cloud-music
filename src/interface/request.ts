@@ -1,24 +1,34 @@
-import { AxiosPromise, AxiosResponse } from 'axios'
-
+import { AxiosPromise } from 'axios'
 
 export interface reqBannerVos {
-  type?: number
+  type?: number;
+}
+
+export interface reqPersonalizedVos {
+  limit?: number;
+}
+
+export interface reqArtistsVos {
+  offset?: number;
+  limit?: number;
+}
+
+export interface reqDjPopularVos {
+  limit:number;
+}
+
+export interface reqArtistslistVos {
+  offset?: number;
+  limit?: number;
+  initial?:string;
+  type?: number;
+  area?: number;
 }
 
 export interface Banner<T = {}> {
  (data: T & reqBannerVos): AxiosPromise<T>
 }
 
-export interface BannerResponse {
-  imageUrl:string;
-  titleColor:string;
-  scm:string;
-}
-
-export interface BannerResponseRaw {
-  banners: BannerResponse[]
-}
-
 export interface reqResult<T = {}> {
-  data: Array<T>
+  data: T[]
 } 
