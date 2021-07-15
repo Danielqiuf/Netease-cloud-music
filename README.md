@@ -1,6 +1,6 @@
 # 网易云音乐(netease cloud music)的vue3+typescript模拟开发版本
-
-## 项目结构
+## （此版本目前只做了首页，有待更新）
+### 项目结构
 │  App.tsx   <br/>
 │  main.ts  <br/>
 │  shims-vue.d.ts   <br/>
